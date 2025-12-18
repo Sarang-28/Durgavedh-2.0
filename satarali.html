@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forts In Satara</title>
+
+<style>
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    background-color: #f0d3b6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+
+    background-image: url("Satara.jpg");  /* your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Section */
+section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Grid */
+.fort-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 70%;
+}
+
+/* Cards */
+.fort {
+    background-color: #cb9f65;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fort:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Text */
+.fort h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.fort h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fort h2 a:hover {
+    color: rgb(182, 67, 67);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Forts In Satara</h1>
+</header>
+
+<section>
+    <div class="fort-container">
+        <div class="fort"><h2><a href="satara/ajinkyatara.html"> Ajinkyatara</a></h2></div>
+        <div class="fort"><h2><a href="satara/kalyangad.html">Kalyangad</a></h2></div>
+        <div class="fort"><h2><a href="satara/pratapgad.html"> Pratapgad</a></h2></div>
+        <div class="fort"><h2><a href="satara/sajjangad.html"> Sajjangad</a></h2></div>
+        <div class="fort"><h2><a href="satara/vasota.html"> Vasota</a></h2></div>
+    </div>
+</section>
+
+<footer>
+    © Forts of Maharashtra
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forts in Maharashtra</title>
+
+    <!-- Elegant fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --bg-1: #381b05;
+            --bg-2: #e9bc90;
+            --accent: #513d04;
+            --accent-2: #8f2b16;
+            --nav-bg: #333842;
+            --card-bg: #bf6b27;
+            --text: #0f0b0b;
+            --muted: #615b5b;
+            --glass: rgba(255,255,255,0.6);
+            --shadow: 0 10px 25px rgba(0,0,0,0.08);
+            --radius: 14px;
+            
+        }
+
+        /* Reset & base */
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body {
+            font-family: "Roboto", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background: radial-gradient(1200px 600px at 10% 10%, rgba(194,69,47,0.06), transparent),
+                        linear-gradient(180deg,var(--bg-1),var(--bg-2));
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height: 1.6;
+            
+        }
+
+        /* Page wrapper for centered content */
+        header, nav, .cont, footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: calc(100% - 40px);
+            
+        }
+
+        header {
+            background: linear-gradient(90deg, rgba(0,0,0,0.6), rgba(0,0,0,0.35));
+            color: #693f1f;
+            padding: 22px 24px;
+            text-align: center;
+            font-size: 45px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-bottom-left-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+            font-family: "Playfair Display", serif;
+            background-image: url("mah.jpg");  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        }
+
+        /* Navigation as pill links */
+        nav {
+            background: transparent;
+            padding: 12px 0;
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        nav a {
+            display: inline-block;
+            background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.03));
+            color: #edc9c9;
+            background-color: var(--nav-bg);
+            padding: 10px 18px;
+            margin: 6px 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 999px;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        }
+
+        nav a:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            box-shadow: 0 14px 30px rgba(25, 8, 7, 0.18);
+            color: #130e0a;
+            text-decoration: none;
+        }
+
+        /* Page heading */
+        .maharajtext {
+            color: var(--accent);
+            font-size: 40px;
+            font-weight: 700;
+            font-family: "Playfair Display", serif;
+            text-align: center;
+            margin: 20px auto 6px;
+            transition: color 0.25s ease;
+        }
+        .maharajtext:hover{ color: var(--accent-2); }
+
+        /* Card-like container for the Maharaj section */
+        .cont {
+            display: flex;
+            gap: 26px;
+            padding: 22px;
+            align-items: flex-start;
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, rgba(255,255,255,0.85), var(--card-bg));
+            box-shadow: var(--shadow);
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        /* Image styling */
+        .Maharaj {
+            width: 450px;
+            max-width: 45%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transition: transform 0.28s ease, filter 0.28s ease;
+            border: 6px solid rgba(107, 25, 25, 0.6);
+            object-fit: cover;
+            background: var(--glass);
+        }
+        .Maharaj:hover{
+            transform: translateY(-6px) scale(1.02);
+            filter: saturate(1.05) contrast(1.02);
+        }
+
+        /* Text column */
+        .maharajpara {
+            flex: 1;
+            min-width: 300px;
+            font-size: 18px;
+            color: var(--text);
+            font-family: "Times New Roman", serif;
+            text-align: justify;
+            padding: 6px 10px;
+            line-height: 1.8;
+        }
+
+        /* Decorative drop cap for paragraph */
+        .maharajpara p:first-letter{
+            float: left;
+            font-family: "Playfair Display", serif;
+            font-size: 44px;
+            line-height: 1;
+            margin-right: 10px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #2a2a2a, #222);
+            color: #fff;
+            text-align: center;
+            padding: 14px;
+            margin-top: 28px;
+            border-radius: 10px;
+            font-size: 15px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        }
+
+        /* Subtle responsive tweaks */
+        @media (max-width: 900px) {
+            .Maharaj{ max-width: 48%; width: 48%; }
+            .maharajtext{ font-size: 34px; }
+            .cont{ padding: 18px; gap: 18px; }
+        }
+
+        @media (max-width: 680px) {
+            header{ font-size: 22px; padding: 16px 14px; }
+            nav a{ padding: 8px 12px; margin: 6px 6px; font-size: 15px; }
+            .cont{ flex-direction: column; text-align: center; align-items: center; }
+            .Maharaj{ max-width: 86%; width: 86%; margin: 6px auto; }
+            .maharajpara{ text-align: left; padding: 6px 4px; }
+            .maharajpara p:first-letter{ font-size: 38px; }
+        }
+
+        /* Accessibility: focus styles */
+        a:focus {
+            outline: 3px solid rgba(158, 58, 40, 0.2);
+            outline-offset: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+</body>
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Forts of Maharashtra</h1>
+    </header>
+
+    <nav>
+        <a href="puneli.html" target="_parent">Pune</a>
+        <a href="satarali.html" target="_parent">Satara</a>
+        <a href="kolhapurli.html" target="_parent">Kolhapur</a>
+        <a href="ahmednagarli.html" target="_parent">AhilyaNagar</a>
+    </nav>
+    <br>
+    <h1 class="maharajtext">Shri. Chhatrapati Shivaji Maharaj</h1><hr>
+    <div class="cont">
+    <img src="maharaj.jpg" class="Maharaj"alt="Shivaji Maharaj">
+    <div class="maharajpara">
+    <p ><b>Shri. Chhatrapati Shivaji Maharaj</b>, the revered founder of the Maratha Empire,
+         was a visionary leader whose deep love for forts played a crucial role in shaping his military strategies. 
+        He understood that forts were not merely structures of stone but the very backbone of Swarajya (self-rule). His devotion to fortification
+         led to the construction and reinforcement of over 300 forts across Maharashtra, each serving as a symbol of strength, resilience, and 
+         strategic brilliance. From the formidable Raigad Fort, where he was crowned, to the invincible Sinhagad and Pratapgad, Shivaji Maharaj
+          ensured that these forts became impenetrable strongholds against enemy forces. His guerrilla warfare tactics, known as Ganimi Kava,
+           relied heavily on the terrain and fortifications, allowing his army to outmaneuver much larger adversaries. Beyond their military 
+           importance, these forts stood as monuments of Maratha pride, reflecting his unwavering commitment to protecting his people and culture.
+            Even today, the forts of Maharashtra echo the legacy of Shivaji Maharaj, inspiring generations with tales of valor, sacrifice, 
+            and the undying spirit of Swarajya. His deep respect and strategic use of these forts remain a testament to his unparalleled leadership
+             and love for the land.</p>
+    </div>
+    </div>
+    
+
+    <br><br><br>
+    <footer>
+        <p>&copy;  Forts of Maharashtra  </p>
+    </footer>
+
+</body>
+
+</html>
